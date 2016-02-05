@@ -30,6 +30,7 @@ Windows - use the package installer
 Alternatively if you have Python (2.7) interpreter installed, 
 you can run the app from console:
 > cd /aplication_path
+
 > python main.py
 
 ### Troubleshooting ###
