@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 
 import kivy
-
-kivy.require('1.9.1')
-
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.adapters.listadapter import ListAdapter
@@ -18,6 +15,8 @@ from lib.csvmerge import merge_files
 from time import time
 from sys import argv
 import os
+
+kivy.require('1.9.0')
 
 Builder.load_string("""
 <Message>
@@ -276,7 +275,7 @@ class SummaryScreen(MyScreen):
                                        am.file_a_key,
                                        am.columns)
         self.ids["status_label"].text = "Finished in {0:.2f} seconds. Rows modified: {1:.0f}".format(
-                time() - start_time, mod_rows_counter)
+            time() - start_time, mod_rows_counter)
         self.ids["b1"].disabled = False
         self.ids["b2"].disabled = False
         self.ids["b3"].disabled = False

@@ -19,7 +19,7 @@ def csv2dic(file_path, key_col=None):
                 key_col = row.keys()[0]
 
             data[row[key_col].decode("utf-8-sig")] = {col.decode("utf-8-sig"): val.decode("utf-8-sig")
-                                                      for col, val in row.iteritems()}
+                                                      for col, val in row.iteritems() if col and val}
     return data
 
 
